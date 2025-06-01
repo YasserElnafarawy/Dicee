@@ -1,3 +1,9 @@
+
+var player1Name = prompt("Player 1 Name");
+var player2Name = prompt("Player 2 Name");
+document.querySelectorAll("p")[0].innerHTML = player1Name;
+document.querySelectorAll("p")[1].innerHTML = player2Name;
+
 var player1 = Math.floor(Math.random() * 6) + 1;
 var player2 = Math.floor(Math.random() * 6) + 1;
 
@@ -51,10 +57,10 @@ else {
 
 
 if (player1 > player2) {
-    document.querySelector("h1").innerHTML = "Player 1 Wins!<img src='./images/trophy.png' class='win' />";
+    document.querySelector("h1").innerHTML = player1Name + " Wins!<img src='./images/trophy.png' class='win' />";
 } 
 else if (player1 < player2) {
-    document.querySelector("h1").innerHTML = "<img src='./images/trophyLeft.png' class='win' />Player 2 Wins!";
+    document.querySelector("h1").innerHTML = "<img src='./images/trophyLeft.png' class='win' />" + player2Name + " Wins!";
 } 
 else {
     document.querySelector("h1").innerHTML = "Draw!";
